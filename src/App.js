@@ -4,9 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Deputados from "./pages/Deputados";
 
+
 function App() {
   return (
-    <div>
+    <div className='App-background'>
       <BrowserRouter>
         <Menu />
         <Container>
