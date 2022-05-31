@@ -3,6 +3,7 @@ import { Card, Col, Row, Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import apiDeputados from '../services/apiDeputados'
 import {FiSearch} from 'react-icons/fi'
+import '../App.css'
 
 const Deputados = () => {
 
@@ -21,7 +22,7 @@ const Deputados = () => {
     <div>
         <h1>Deputados</h1>
 
-        <Table striped bordered hover>
+        <Table striped bordered hover variant="info">
             <thead>
                 <tr>
                     <th>Detalhar</th>

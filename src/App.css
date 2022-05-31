@@ -37,3 +37,12 @@
   }
 }
 
+.App-background {
+  background-color: #0B610B;
+  padding: 0px, 0, 0px, 0;
+  height: 100%;
+  background-size: 500%;
+  background-repeat: no-repeat;
+  background-position:left ;
+}
+

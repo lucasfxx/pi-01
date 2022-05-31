@@ -6,7 +6,7 @@ const Menu = () => {
   return (
     <div>
 
-      <Navbar bg="primary" variant="dark" className="mb-3">
+      <Navbar bg="warning" variant="dark" className="mb-3">
         <Container>
           <Navbar.Brand href="#home">Corruptoflix</Navbar.Brand>
           <Nav className="me-auto">
