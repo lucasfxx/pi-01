@@ -5,9 +5,10 @@ import { Container } from "react-bootstrap";
 import Deputados from "./pages/Deputados";
 import DeputadosDetalhes from "./pages/DeputadosDetalhes";
 
+
 function App() {
   return (
-    <div>
+    <div className='App-background'>
       <BrowserRouter>
         <Menu />
         <Container>
