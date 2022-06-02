@@ -21,7 +21,7 @@ const Deputados = () => {
     <div>
         <h1>Deputados</h1>
 
-        <Table striped bordered hover>
+        <Table striped bordered hover variant="primary">
             <thead>
                 <tr>
                     <th>Detalhar</th>
@@ -33,7 +33,7 @@ const Deputados = () => {
                 {deputados.map(item => (
                     <tr key={item.id}>
                         <td>
-                            <Link to={'/deputados/' + item.id}>
+                            <Link to={"/deputadosDetalhes/" + item.id}>
                                 <FiSearch />
                             </Link>
                         </td>
