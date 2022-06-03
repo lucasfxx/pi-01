@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Col, Row } from 'react-bootstrap'
+import { Card, Col, Row, Spinner } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
 import Cartao from '../components/cartao'
 import apiDeputados from '../services/apiDeputados'
@@ -23,7 +23,7 @@ const DeputadosDetalhes = () => {
 
     return (
         <div>
-            {!deputado.id && <h1>Carregando... Aguarde!</h1>}
+            {!deputado.id && <Spinner animation="border" variant="primary" />}
 
             {deputado.id &&
                 <div>
