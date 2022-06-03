@@ -16,7 +16,7 @@ const DeputadosDetalhes = () => {
     useEffect(() => {
         apiDeputados.get('deputados/' + params.id ).then(resultado => {
             setDeputado(resultado.data.dados)
-            console.log(resultado.data)
+            
         })
      
     }, [])
