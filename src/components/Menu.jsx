@@ -17,7 +17,6 @@ const Menu = () => {
                         />Corruptoflix</Navbar.Brand>
           <Nav className="me-auto">
             <Link className="nav-link" to="/deputados">Deputados</Link>
-            <Link className="nav-link" to="/deputadosDetalhes">Deputados Detalhes</Link>
           </Nav>
         </Container>
       </Navbar>

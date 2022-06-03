@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
+import Cartao from '../components/cartao'
 import apiDeputados from '../services/apiDeputados'
+
+
 
 const DeputadosDetalhes = () => {
 
-  const params = useParams()
-  const [deputado,  setDeputado] = useState([])
+    const params = useParams()
+    const [deputado, setDeputado] = useState({})
+   
 
 
-  useEffect(() => {
-    apiDeputados.get('/deputados/' + params.id).then(resultado => {
-      console.log(resultado.data.dados)
-    })
-  }, [])
-  return (
-    <div>
+    useEffect(() => {
+        apiDeputados.get('deputados/' + params.id ).then(resultado => {
+            setDeputado(resultado.data.dados)
+            console.log(resultado.data)
+        })
+     
+    }, [])
+
+    return (
+        <div>
             {!deputado.id && <h1>Carregando... Aguarde!</h1>}
 
             {deputado.id &&
@@ -23,21 +30,27 @@ const DeputadosDetalhes = () => {
                     <h1>{deputado.nome}</h1>
                     <Row>
                         <Col md={4}>
-                            <Card>
-                            <Card.Img variant="top" src={deputado.urlFoto} />
-                            </Card>
+                            <Cartao>
+                                <Card.Img variant="top" src={deputado.ultimoStatus.urlFoto} />
+                            </Cartao>
                         </Col>
                         <Col md={8}>
-                            <p><strong>Data de Nascimento </strong>{deputado.birthday}</p>
-                            <p><strong>Local de Nascimento </strong>{deputado.place_of_birth}</p>
-                            <p><strong>Biografia </strong>{deputado.biography}</p>
-                            <Link className='btn btn-primary' to={-1}>Voltar</Link>
+                            <p><strong>Nome: </strong>{deputado.ultimoStatus.nome}</p>
+                            <p><strong>Partido: </strong>{deputado.ultimoStatus.siglaPartido}</p>
+                            <p><strong>Estado: </strong>{deputado.ultimoStatus.siglaUf}</p>
+                            <p><strong>Email: </strong>{deputado.ultimoStatus.email}</p>
+
+                            <Link className='btn btn-warning' to={-1 }> VOLTAR </Link>
                         </Col>
-                                        
+
+
+                       
                     </Row>
+                    
                 </div>
             }
         </div>
     )
 }
+
 export default DeputadosDetalhes

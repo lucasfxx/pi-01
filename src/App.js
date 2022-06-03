@@ -6,15 +6,16 @@ import Deputados from "./pages/Deputados";
 import DeputadosDetalhes from "./pages/DeputadosDetalhes";
 
 
+
 function App() {
   return (
-    <div className='App-background'>
+    <div className='App-header'>
       <BrowserRouter>
         <Menu />
         <Container>
           <Routes>
             <Route path="/deputados" element={<Deputados />} />
-            <Route path="/deputadosDetalhes" element={<DeputadosDetalhes />} />
+            <Route path="/deputadosDetalhes/:id" element={<DeputadosDetalhes />} />
           </Routes>
         </Container>
       </BrowserRouter>

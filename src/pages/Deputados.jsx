@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Col, Row, Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import apiDeputados from '../services/apiDeputados'
 import {FiSearch} from 'react-icons/fi'
 import '../App.css'
+import apiDeputados from '../services/apiDeputados'
+
 
 const Deputados = () => {
 
