@@ -23,6 +23,12 @@
   color: white;
 }
 
+.App-centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App-link {
   color: #61dafb;
 }

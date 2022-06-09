@@ -7,7 +7,7 @@ const Cartao = (props) => {
 
     return (
         <div>
-            <Card bg="primary" border="primary" style={{ width: '18rem' }} className="mb-3">
+            <Card  border="primary" style={{ width: '20rem' }} className="mb-3">
                 <Card.Img variant="top" src={props.imagem} />
                 <Card.Body>
                     <Card.Title>{ props.titulo }</Card.Title>

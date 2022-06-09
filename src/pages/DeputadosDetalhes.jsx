@@ -30,7 +30,7 @@ const DeputadosDetalhes = () => {
                     <h1>{deputado.nome}</h1>
                     <Row>
                         <Col md={4}>
-                            <Cartao>
+                            <Cartao >
                                 <Card.Img variant="top" src={deputado.ultimoStatus.urlFoto} />
                             </Cartao>
                         </Col>
@@ -39,6 +39,8 @@ const DeputadosDetalhes = () => {
                             <p><strong>Partido: </strong>{deputado.ultimoStatus.siglaPartido}</p>
                             <p><strong>Estado: </strong>{deputado.ultimoStatus.siglaUf}</p>
                             <p><strong>Email: </strong>{deputado.ultimoStatus.email}</p>
+                            <p><strong>Data de Nascimento: </strong>{deputado.dataNascimento}</p>
+                            <p style={{ fontSize: "18pt" }}><strong>CPF: </strong>{deputado.cpf}</p>
 
                             <Link className='btn btn-warning' to={-1 }> VOLTAR </Link>
                         </Col>
